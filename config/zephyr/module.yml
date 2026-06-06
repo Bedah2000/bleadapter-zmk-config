@@ -1,0 +1,7 @@
+name: zmk-feature-ble-status-led
+build:
+  cmake: .
+  kconfig: Kconfig
+  settings:
+    board_root: .
+

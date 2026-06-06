@@ -1,7 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/rgb.h>
 
 / {
     keymap {
@@ -18,15 +17,13 @@
 
         maintenance_layer {
             // Wartung: Buchse 8 halten, dann eine dieser Funktionen druecken.
-            // 1 = Pairing neu starten (alle Bonds loeschen)
+            // 1 = Pairing des aktiven Profils neu starten
             // 2/3 = BLE-Profil wechseln
-            // 4 = LED blau (Pairing-Hinweis)
-            // 5 = LED gruen (manuell: verbunden/OK)
-            // 6 = LED aus
+            // 4 = alle BLE-Kopplungen loeschen
             // 7 = Bootloader fuer neues Flashen
             bindings = <
-                &bt BT_CLR_ALL                  &bt BT_NXT                     &bt BT_PRV  &rgb_ug RGB_COLOR_HSB(240,100,20)
-                &rgb_ug RGB_COLOR_HSB(128,100,20)  &rgb_ug RGB_OFF             &bootloader &trans
+                &bt BT_CLR      &bt BT_NXT  &bt BT_PRV  &bt BT_CLR_ALL
+                &none           &none       &bootloader &trans
             >;
         };
     };

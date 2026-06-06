@@ -1,0 +1,22 @@
+config ZMK_BLE_STATUS_LED
+    bool "BLE status LED"
+    depends on ZMK_BLE
+    depends on LED_STRIP
+    default y
+    help
+      Drives the single WS2812 LED from the active ZMK BLE profile state.
+
+if ZMK_BLE_STATUS_LED
+
+config ZMK_BLE_STATUS_LED_BRIGHTNESS
+    int "BLE status LED brightness"
+    range 1 100
+    default 20
+
+config ZMK_BLE_STATUS_LED_POLL_INTERVAL_MS
+    int "BLE status LED update interval"
+    range 100 5000
+    default 500
+
+endif
+
