@@ -19,8 +19,12 @@ Schritt 0 ist eingetragen: Buchsen 1..8 liegen auf D0..D7, die WS2812-Datenleitu
 - Taster: aktiv LOW mit internem Pull-Up
 - BLE-Name: `BLEAdapter8`
 - Keycodes: Space, Return, Tab, Escape, Left, Right, Up, Down
-- Bluetooth-Reset: Buchse 1 + Buchse 8 gemeinsam loescht alle gespeicherten BLE-Kopplungen.
-- RGB: konfiguriert, aber beim Start aus, damit der erste Pairing-Test nicht durch Effekte irritiert.
+- Buchse 8: kurz = Pfeil runter, halten = Wartungsebene.
+- Pairing neu starten: Buchse 8 halten, Buchse 1 druecken. Danach `BLEAdapter8` am Handy neu suchen.
+- BLE-Profil wechseln: Buchse 8 halten, Buchse 2 = naechstes Profil, Buchse 3 = vorheriges Profil.
+- LED manuell: Buchse 8 halten, Buchse 4 = blau, Buchse 5 = gruen, Buchse 6 = aus.
+- Bootloader: Buchse 8 halten, Buchse 7 druecken.
+- RGB: konfiguriert, aber beim Start aus, damit der Pairing-Test nicht durch Effekte irritiert.
 - Ziel: BLE-Tastatur fuer iOS Switch Control und Android Switch Access
 
 ## Shield-Dateien
