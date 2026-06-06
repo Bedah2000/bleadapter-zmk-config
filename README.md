@@ -16,6 +16,7 @@ Schritt 0 ist eingetragen: Buchsen 1..8 liegen auf D0..D7, die WS2812-Datenleitu
 - Shield: `bleadapter_8switch`
 - Kscan: `zmk,kscan-gpio-direct`
 - Taster: aktiv LOW mit internem Pull-Up
+- BLE-Name: `BLEAdapter8`
 - Keycodes: Space, Return, Tab, Escape, Left, Right, Up, Down
 - Ziel: BLE-Tastatur fuer iOS Switch Control und Android Switch Access
 

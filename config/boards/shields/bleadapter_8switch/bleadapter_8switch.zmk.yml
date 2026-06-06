@@ -1,6 +1,6 @@
 file_format: "1"
 id: bleadapter_8switch
-name: BLEAdapter 8Switch
+name: BLEAdapter8
 type: shield
 url: https://github.com/
 requires: [xiao]

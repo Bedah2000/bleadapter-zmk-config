@@ -1,7 +1,7 @@
 if SHIELD_BLEADAPTER_8SWITCH
 
 config ZMK_KEYBOARD_NAME
-    default "BLEAdapter 8Switch"
+    default "BLEAdapter8"
 
 endif
 
