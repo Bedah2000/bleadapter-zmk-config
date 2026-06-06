@@ -6,12 +6,13 @@
  * Green steady: active BLE profile is connected.
  */
 
-#include <device.h>
-#include <drivers/led_strip.h>
+#include <zephyr/device.h>
+#include <zephyr/drivers/led_strip.h>
+#include <zephyr/init.h>
+#include <zephyr/kernel.h>
+#include <zephyr/logging/log.h>
+
 #include <errno.h>
-#include <init.h>
-#include <kernel.h>
-#include <logging/log.h>
 #include <stdbool.h>
 #include <stdint.h>
 
