@@ -18,3 +18,7 @@ Schritt 0 ist eingetragen: Buchsen 1..8 liegen auf D0..D7, die WS2812-Datenleitu
 - Taster: aktiv LOW mit internem Pull-Up
 - Keycodes: Space, Return, Tab, Escape, Left, Right, Up, Down
 - Ziel: BLE-Tastatur fuer iOS Switch Control und Android Switch Access
+
+## Shield-Dateien
+
+Das eigene Shield liegt unter `config/boards/shields/bleadapter_8switch/`, damit der GitHub-User-Config-Build es beim Aufruf mit `-DZMK_CONFIG=config` findet.
