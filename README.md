@@ -12,7 +12,7 @@ Schritt 0 ist eingetragen: Buchsen 1..8 liegen auf D0..D7, die WS2812-Datenleitu
 
 ## Geplantes MVP
 
-- Board: `xiao_ble//zmk`
+- Board: `seeeduino_xiao_ble` mit gepinntem ZMK `v0.3.0`
 - Shield: `bleadapter_8switch`
 - Kscan: `zmk,kscan-gpio-direct`
 - Taster: aktiv LOW mit internem Pull-Up
