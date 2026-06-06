@@ -1,0 +1,11 @@
+file_format: "1"
+id: bleadapter_8switch
+name: BLEAdapter 8Switch
+type: shield
+url: https://github.com/
+requires: [xiao]
+features:
+  - keys
+siblings:
+  - bleadapter_8switch
+

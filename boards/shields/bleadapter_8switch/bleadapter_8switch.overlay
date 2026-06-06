@@ -1,0 +1,39 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,matrix-transform = &default_transform;
+    };
+
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-direct";
+        wakeup-source;
+
+        // Schritt 0 bestaetigt: Buchsen 1..8 liegen auf XIAO D0..D7.
+        // Alle Taster schalten gegen GND: aktiv LOW mit internem Pull-Up.
+        input-gpios
+            = <&gpio0 2  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // Buchse 1, D0/P0.02
+            , <&gpio0 3  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // Buchse 2, D1/P0.03
+            , <&gpio0 28 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // Buchse 3, D2/P0.28
+            , <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // Buchse 4, D3/P0.29
+            , <&gpio0 4  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // Buchse 5, D4/P0.04
+            , <&gpio0 5  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // Buchse 6, D5/P0.05
+            , <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // Buchse 7, D6/P1.11
+            , <&gpio1 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // Buchse 8, D7/P1.12
+            ;
+    };
+
+    default_transform: matrix_transform {
+        compatible = "zmk,matrix-transform";
+        rows = <1>;
+        columns = <8>;
+
+        // Direkte 1x8-Zuordnung: Keymap-Position 0..7 entspricht Buchse 1..8.
+        map = <
+            RC(0,0) RC(0,1) RC(0,2) RC(0,3)
+            RC(0,4) RC(0,5) RC(0,6) RC(0,7)
+        >;
+    };
+};
+

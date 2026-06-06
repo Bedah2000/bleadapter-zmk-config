@@ -1,0 +1,3 @@
+config SHIELD_BLEADAPTER_8SWITCH
+    def_bool $(shields_list_contains,bleadapter_8switch)
+
