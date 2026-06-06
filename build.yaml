@@ -1,3 +1,5 @@
 include:
   - board: seeeduino_xiao_ble
     shield: bleadapter_8switch
+  - board: seeeduino_xiao_ble
+    shield: bleadapter_8switch settings_reset

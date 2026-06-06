@@ -1,7 +1,19 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_bt_clear_all {
+            // Buchse 1 + Buchse 8 gemeinsam: alle BLE-Kopplungen im Geraet loeschen.
+            timeout-ms = <1000>;
+            key-positions = <0 7>;
+            bindings = <&bt BT_CLR_ALL>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 

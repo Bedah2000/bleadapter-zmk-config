@@ -9,6 +9,7 @@ Schritt 0 ist eingetragen: Buchsen 1..8 liegen auf D0..D7, die WS2812-Datenleitu
 1. Repo nach GitHub schieben.
 2. GitHub Actions Build ausfuehren.
 3. UF2-Artefakt per Bootloader-Laufwerk auf den XIAO ziehen.
+4. Bei Pairing-Problemen zuerst die `settings_reset`-UF2 flashen, danach wieder die normale Firmware.
 
 ## Geplantes MVP
 
@@ -18,6 +19,8 @@ Schritt 0 ist eingetragen: Buchsen 1..8 liegen auf D0..D7, die WS2812-Datenleitu
 - Taster: aktiv LOW mit internem Pull-Up
 - BLE-Name: `BLEAdapter8`
 - Keycodes: Space, Return, Tab, Escape, Left, Right, Up, Down
+- Bluetooth-Reset: Buchse 1 + Buchse 8 gemeinsam loescht alle gespeicherten BLE-Kopplungen.
+- RGB: konfiguriert, aber beim Start aus, damit der erste Pairing-Test nicht durch Effekte irritiert.
 - Ziel: BLE-Tastatur fuer iOS Switch Control und Android Switch Access
 
 ## Shield-Dateien
